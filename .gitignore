@@ -1,8 +1,5 @@
-/node_modules
-/coverage
-/build
-/config
-
+node_modules/
+src/config
 .DS_Store
 .env.local
 .env.development.local
