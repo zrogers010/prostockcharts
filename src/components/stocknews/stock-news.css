@@ -41,3 +41,19 @@
     height: auto;
     color: #2f4f4f;
 }
+
+
+.article-left {
+    float: left;
+    width: 65%;
+    padding: 10px;
+    height: auto;
+}
+
+.article-right {
+    float: right;
+    width: 35%;
+    padding: 10px;
+    height: auto;
+}
+

@@ -1,5 +1,4 @@
 import { iex } from '../config/iex.js';
-import { moment } from 'moment';
 
 export const lineChart = {
 

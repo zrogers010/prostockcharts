@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { withRouter } from '../util/withRouter';
 import { stockDetails } from '../../resources/stock-details.js';
+import { numFormat } from '../../resources/num-format.js';
 import './stock-details.css'
 
 class StockAbout extends Component {
@@ -44,7 +45,7 @@ class StockAbout extends Component {
 							<div className="stats-name">Employees</div>
 						</span>
 						<span>
-							<div>{this.state.data.employees}</div>
+							<div>{numFormat.nFormatter(this.state.data.employees, 3)}</div>
 						</span>
 					</div>
 					<div>

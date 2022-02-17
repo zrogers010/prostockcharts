@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { withRouter } from '../util/withRouter';
 import { stockStats } from '../../resources/stock-stats.js';
+import './stock-header.css';
 
 class StockHeader extends Component {
 	constructor(props) {
@@ -21,10 +22,20 @@ class StockHeader extends Component {
 	}
 
 	render() {
+		const intlNumFormat = new Intl.NumberFormat('en-US');
+		let latestPrice = intlNumFormat.format(this.state.data.latestPrice);
+		let change = this.state.data.change;
+		let percentChange = (change / this.state.data.latestPrice);
+		let displayChange = ((change < 0) ? change : '+' + change);
+
 		return (
 			<div className = "stock-header">
-				<h2>{this.state.data.companyName} ({this.state.data.symbol})</h2>
-				<h3>${this.state.data.latestPrice} ({this.state.data.change}%)</h3>
+				<div>
+					<h2>{this.state.data.companyName} ({this.state.data.symbol})</h2>
+				</div>
+				<div>
+					<h3>${latestPrice} {displayChange} ({percentChange.toFixed(2)}%)</h3>
+				</div>
 			</div>				
 		)
 	}

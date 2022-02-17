@@ -34,20 +34,24 @@ class StockNews extends Component {
 					return(
 						<li key={d.url}>
                             <div className='article'>
-                                <div className="article-headline">
-                                    <span>{ d.headline }</span>
+                                <div className='article-left'>
+                                    <div className="article-image">
+                                        <img src={ d.image } width="220" height="124"/>
+                                    </div>
                                 </div>
-                                <div className="article-source">
-                                    <span>{ d.source }</span>
-                                </div>
-                                <div className="article-summary">
-                                    <span>{ d.summary }</span>
-                                </div>
-                                <div className="article-url">
-                                    <span>{ d.url }</span>
-                                </div>
-                                <div className="article-image">
-                                    <img src={ d.image } width="220" height="124"/>
+                                <div className='article-right'>
+                                    <div className="article-headline">
+                                        <span>{ d.headline }</span>
+                                    </div>
+                                    <div className="article-source">
+                                        <span>{ d.source }</span>
+                                    </div>
+                                    <div className="article-summary">
+                                        <span>{ d.summary }</span>
+                                    </div>
+                                    <div className="article-url">
+                                        <span>{ d.url }</span>
+                                    </div>
                                 </div>
                             </div>
 						</li>
