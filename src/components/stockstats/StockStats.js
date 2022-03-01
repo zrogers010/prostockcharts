@@ -57,7 +57,7 @@ class StockStats extends Component {
 							<div className="stats-name">Average volume</div>
 						</span>
 						<span>
-							<div>${intlNumFormat.format(this.state.data.avgTotalVolume, 2)}</div>
+							<div>${numFormat.nFormatter(this.state.data.avgTotalVolume, 2)}</div>
 						</span>
 					</div>
 					
@@ -90,7 +90,7 @@ class StockStats extends Component {
 							<div className="stats-name">Volume</div>
 						</span>
 						<span>
-							<div>{numFormat.nFormatter(this.state.data.volume, 2)}</div>
+							<div>${numFormat.nFormatter(this.state.data.volume, 2)}</div>
 						</span>
 					</div>
 					<div className="year-high">

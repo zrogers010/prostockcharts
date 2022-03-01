@@ -10,24 +10,26 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
-        <Routes>
-          <Route 
-            path="/" 
-            element={<Home />}
-          />
-          <Route 
-            path="/stocks/:symbol" 
-            element={<Stock />}
-          />
-          <Route
-            path="/stocks/:symbol/chart"
-            element={<StockChart />}
-          />
-          <Route 
-            path="*"
-            element={<Home />}
-          />
-        </Routes>
+        <div className="page">
+          <Routes>
+            <Route 
+              path="/" 
+              element={<Home />}
+            />
+            <Route 
+              path="/stocks/:symbol" 
+              element={<Stock />}
+            />
+            <Route
+              path="/stocks/:symbol/chart"
+              element={<StockChart />}
+            />
+            <Route 
+              path="*"
+              element={<Home />}
+            />
+          </Routes>
+        </div>
       </Router>
     </div>
   );

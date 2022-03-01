@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import { Link } from 'react-router-dom'
+import Search from '../search/Search';
 import './navbar.css'
 
 class Navbar extends Component {
@@ -19,14 +20,27 @@ class Navbar extends Component {
 						</Link>
 					</li>
 					<li className="list-item">
+						<Link to="/" className="link-light">
+							Charts
+						</Link>
+					</li>
+					<li className="list-item">
+						<Link to="/" className="link-light">
+							News
+						</Link>
+					</li>
+					<li className="list-item">
 						<Link to="/about" className="link-light">
-							About
+							Crypto
 						</Link>
 					</li>
 					<li className="list-item">
 						<Link to="/stocks" className="link-light">
-							Stocks
+							About
 						</Link>
+					</li>
+					<li className="list-item">
+						<Search />
 					</li>
 				</ul>
 			</div>

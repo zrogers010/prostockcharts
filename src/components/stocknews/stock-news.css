@@ -45,15 +45,20 @@
 
 .article-left {
     float: left;
-    width: 65%;
+    width: 30%;
+    min-width: 240px;
     padding: 10px;
     height: auto;
 }
 
 .article-right {
     float: right;
-    width: 35%;
+    width: 70%;
     padding: 10px;
     height: auto;
+}
+
+ul {
+    list-style: none;
 }
 

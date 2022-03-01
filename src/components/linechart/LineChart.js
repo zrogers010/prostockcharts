@@ -54,19 +54,34 @@ class LineChart extends Component {
 
         const { data, chartOptions, hoverData } = this.state;
         const options = {
-            title: {
-                text: this.props.params.symbol.toUpperCase()
-            },
             chart: {
                 type: 'line', 
                 backgroundColor: '#FFFFFF'
                 //,shadow: true
             },
+            title: {
+                //text: this.props.params.symbol.toUpperCase()
+                text: null
+            },
+            xAxis: {
+                title: {
+                  text: 'Date'
+                },
+                type: 'datetime'
+              },
+            yAxis: {
+                title: {
+                  text: 'Price $'
+                }
+            },
+            legend: {
+                enabled: false
+            },
             credits: {
                 enabled: false
             },
             series: [{
-                data: this.state.data // [1, 10, 3, 10]
+                data: this.state.data
             }]
         }
 

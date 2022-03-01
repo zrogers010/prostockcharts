@@ -46,6 +46,9 @@ class StockNews extends Component {
                                     <div className="article-source">
                                         <span>{ d.source }</span>
                                     </div>
+                                    <div className="article-date">
+                                        <span>{ d.date }</span>
+                                    </div>
                                     <div className="article-summary">
                                         <span>{ d.summary }</span>
                                     </div>

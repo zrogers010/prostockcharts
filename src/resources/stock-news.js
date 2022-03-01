@@ -4,6 +4,7 @@
 
 
 import { iex } from '../config/iex.js';
+import { Dayjs } from 'dayjs';
 
 export const stockNews = {
 
@@ -22,20 +23,17 @@ export const stockNews = {
 	},
 	
 	formatNewsData: (data) => {
-		// console.log("format news data")
-		// console.log(data)
-		// console.log(data.length)
-		
 		const news = []
 		for (let i=0; i<data.length; i++) {
-			//console.log(data[i]);
-			const formattedData = {}
+            const formattedData = {}
+            const dt = new Date(data[i].datetime);
+            const date = dt.toLocaleString('en-US', { timezone: 'UTC' });
+            formattedData.date = date;
 			formattedData.headline = data[i].headline;
 			formattedData.summary = data[i].summary
 			formattedData.image = data[i].image
 			formattedData.source = data[i].source
 			formattedData.url = data[i].url
-			//console.log("formattedData :", formattedData)
 			news.push(formattedData);
 		}
 

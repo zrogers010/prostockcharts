@@ -1,9 +1,11 @@
 import { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useParams } from 'react-router-dom';
 import { withRouter } from '../util/withRouter';
+import StockNav from '../stocknav/StockNav.js';
 import StockStats from '../stockstats/StockStats.js';
 import StockDetails from '../stockdetails/StockDetails.js';
 import StockChart from '../stockchart/StockChart.js';
+import StockChartNav from '../stockchartnav/StockChartNav';
 import StockHeader from '../stockheader/StockHeader.js';
 import StockNews from '../stocknews/StockNews.js';
 import LineChart from '../linechart/LineChart.js';
@@ -22,15 +24,15 @@ class Stock extends Component {
 		return (
 		
             <div className="main-home-container">
-                {/* <LineChart /> */}
                 <div className="row">
                     <StockHeader />
                 </div>
                 <div className="row">
-                    {/* ... stock nav bar (adv chart, options, news page, ) */}
+                    <StockNav />
                     <div className="column-chart">
                         {/* <h2>Column 1</h2> */}
                         {/* <StockChart symbol={this.state.data} /> */}
+                        <StockChartNav />
                         <LineChart />
                     </div>
                     <div className="column-stats">
